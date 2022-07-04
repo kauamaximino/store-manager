@@ -2,7 +2,7 @@ const connection = require('./connection');
 
 const getProductById = async (id) => {
   const [product] = await connection.execute(
-    'SELECT * FROM products WHERE id = ?',
+    'SELECT * FROM StoreManager.products WHERE id = ?',
     [id],
   );
   return product;
