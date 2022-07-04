@@ -1,4 +1,3 @@
-const connection = require("./connection");
+// const connection = require("./connection");
 
-const insertProduct = async (product) => {
-  
+// const insertProduct = async (product) => {
