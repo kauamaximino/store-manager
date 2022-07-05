@@ -3,6 +3,7 @@ const getProductById = require('./getProductById');
 const insertProduct = require('./insertProduct');
 const listSales = require('./listSales');
 const listSalesId = require('./listSalesId');
+const deleteProduct = require('./deleteProduct');
 
 module.exports = {
   getAllProducts,
@@ -10,4 +11,5 @@ module.exports = {
   insertProduct,
   listSales,
   listSalesId,
+  deleteProduct,
 };

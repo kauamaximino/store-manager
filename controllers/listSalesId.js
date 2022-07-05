@@ -4,7 +4,6 @@ const listSalesId = async (request, response) => {
   try {
     const { id } = request.params;
     const salesId = await services.listSalesId(id);
-      console.log(`${salesId} controllers`);
     return response.status(200).json(salesId);
   } catch (error) {
     return response.status(404).json({ message: error.message });

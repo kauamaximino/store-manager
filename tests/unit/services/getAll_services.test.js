@@ -25,12 +25,6 @@ describe("Testa a função getAllProducts da camada services", () => {
       const response = await services.getAllProducts();
       expect(response).to.be.a("array");
     });
-
-    // it("SERVICES - GET/products, retorna um array com objetos dentro", async () => {
-    //   const response = await services.getAllProducts();
-    //   console.log(response);
-    //   expect(response[0]).to.be.a("object");
-    // });
   });
 
   describe("Quando a função está retornando um erro", () => {
