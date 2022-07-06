@@ -1,22 +1,13 @@
 const app = require('./app');
 require('dotenv').config();
 
-const controllers = require('./controllers');
-const middlewares = require('./middlewares');
+const productRouter = require('./routes/productRouter');
+const salesRouter = require('./routes/salesRouter');
 
 // não altere esse arquivo, essa estrutura é necessária para à avaliação do projeto
 
-app.get('/products/:id', controllers.getProductById);
-
-app.get('/products', controllers.getAllProducts);
-
-app.post('/products', middlewares.validateName, controllers.insertProduct);
-
-app.get('/sales/:id', controllers.listSalesId);
-
-app.get('/sales', controllers.listSales);
-
-app.delete('/products/:id', controllers.deleteProduct);
+app.use(productRouter);
+app.use(salesRouter);
 
 app.listen(process.env.PORT, () => {
   console.log(`Escutando na porta ${process.env.PORT}`);
